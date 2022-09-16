@@ -1,6 +1,7 @@
 import React from "react";
+import { useEffect } from "react";
 
-export default function () {
+export default function() {
   const weekday = [
     "Sunday",
     "Monday",
@@ -28,23 +29,19 @@ export default function () {
   //Month
   const d = new Date();
   let name = month[d.getMonth()];
-  console.log(name);
 
   // week
 
   let day = new Date();
   let printDay = weekday[day.getDay()];
-  console.log(printDay);
 
   //date
   let date = new Date();
   let getDate = date.getDate();
-  console.log(getDate);
 
   //year
   let year = new Date();
   let getYear = year.getFullYear();
-  console.log(getYear);
 
   //input
   // const [giveName, setName] = React.useState("");
@@ -68,8 +65,18 @@ export default function () {
     }
   }
 
+  const getLocal = () => {
+    let list = localStorage.getItem("items");
+    console.log(list);
+    if (list) {
+      return JSON.parse(localStorage.getItem("items"));
+    } else {
+      return [];
+    }
+  };
+
   const [inputText, setInputText] = React.useState("");
-  const [items, setItems] = React.useState([]);
+  const [items, setItems] = React.useState(getLocal());
 
   function handleChange(event) {
     const newValue = event.target.value;
@@ -88,6 +95,18 @@ export default function () {
       addItem();
     }
   }
+
+  useEffect(() => {
+    localStorage.setItem("items", JSON.stringify(items));
+  }, [items]);
+
+  // useEffect(() => {
+  //   const items = JSON.parse(localStorage.getItem("items"));
+  //   if (items) {
+  //     setItems(items);
+  //   }
+  // }, []);
+
   return (
     <div className="container">
       <div className="Heading">
