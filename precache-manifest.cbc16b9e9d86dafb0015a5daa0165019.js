@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "127148e9571cdb03b4b2",
+    "revision": "fb705726e726ca4a62a6",
     "url": "/todoreact/static/css/main.92469373.chunk.css"
   },
   {
-    "revision": "127148e9571cdb03b4b2",
-    "url": "/todoreact/static/js/main.127148e9.chunk.js"
+    "revision": "fb705726e726ca4a62a6",
+    "url": "/todoreact/static/js/main.fb705726.chunk.js"
   },
   {
     "revision": "cc360fb6938c4a946641",
@@ -24,7 +24,7 @@ self.__precacheManifest = [
     "url": "/todoreact/static/media/trianglify-lowres.05378cb1.png"
   },
   {
-    "revision": "a4b5cd0c81acd1c97e6df967ae13160b",
+    "revision": "d132e836de27952d628c3342e7ec6857",
     "url": "/todoreact/index.html"
   }
 ];
